@@ -11,7 +11,7 @@ class _DiscoverScreenState extends State<DiscoverScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(child: Text("discover Screen"),),
+      body: Center(child: Text("This is discover Screen"),),
     );
   }
 }
