@@ -26,7 +26,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       body:  screenList[screenNo],
       bottomNavigationBar: Padding(
-        padding:  EdgeInsets.all(10.0),
+        padding:  const EdgeInsets.all(10.0),
         child: Container(
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 17),
           decoration: BoxDecoration(
