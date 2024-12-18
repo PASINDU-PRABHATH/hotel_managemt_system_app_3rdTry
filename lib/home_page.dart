@@ -31,7 +31,7 @@ class _HomePageState extends State<HomePage> {
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 17),
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(50),
-              color: const Color.fromARGB(213, 0, 0, 0)),
+              color: const Color.fromARGB(217, 0, 0, 0)),
           width: double.infinity,
           height: 80,
           child: Center(
@@ -73,7 +73,7 @@ class _HomePageState extends State<HomePage> {
         setState(() {
           screenNo = index;
         });
-        print(screenNo);
+        
       },
       child: Column(
         children: [
