@@ -3,6 +3,7 @@ import 'package:hotel_booking_app/screens/booking_screen.dart';
 import 'package:hotel_booking_app/screens/discover_screen.dart';
 import 'package:hotel_booking_app/screens/favourite_screen.dart';
 import 'package:hotel_booking_app/screens/message_screen.dart';
+import 'package:hotel_booking_app/services/firebase_services.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -14,7 +15,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   int screenNo = 0;
 
-  List<Widget> screenList = const[
+  List<Widget> screenList = const [
     DiscoverScreen(),
     FavouriteScreen(),
     BookingScreen(),
@@ -22,12 +23,22 @@ class _HomePageState extends State<HomePage> {
   ];
 
   @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+
+    FirebaseServices.getHotels();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body:  screenList[screenNo],
+      body: screenList[screenNo],
       bottomNavigationBar: Padding(
-        padding:  const EdgeInsets.all(10.0),
+        
+        padding: const EdgeInsets.all(10.0),
         child: Container(
+          
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 17),
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(50),
@@ -73,7 +84,10 @@ class _HomePageState extends State<HomePage> {
         setState(() {
           screenNo = index;
         });
+<<<<<<< Updated upstream
         print(screenNo);
+=======
+>>>>>>> Stashed changes
       },
       child: Column(
         children: [
